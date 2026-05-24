@@ -8,9 +8,10 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { collection, addDoc, doc, getDoc } from 'firebase/firestore';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import { Suspense } from 'react';
 
-export default function SubmitPage() {
-  const router = useRouter();
+function SubmitContent() {
+   const router = useRouter();
   const searchParams = useSearchParams();
   const category = searchParams.get('category'); // 'physical' or 'cyber'
 
@@ -396,5 +397,13 @@ export default function SubmitPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function SubmitPage() {
+  return (
+    <Suspense fallback={<div>loading...</div>}>
+      <SubmitContent />
+    </Suspense>
   );
 }
