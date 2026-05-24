@@ -25,7 +25,8 @@ export default function ChooseCategoryPage() {
   }, [router]);
 
   const handleCategorySelect = (category) => {
-    router.push('/submit/cyber')  };
+  router.push(`/submit/${category}`);
+};
 
   if (loading) {
     return (
