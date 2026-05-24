@@ -7,14 +7,14 @@ import { useState, useEffect } from 'react';
 import { auth, db } from '@/lib/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import { collection, addDoc, doc, getDoc } from 'firebase/firestore';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
 import { Suspense } from 'react';
 
 function SubmitContent() {
-   const router = useRouter();
-  const searchParams = useSearchParams();
-  const category = searchParams.get('category'); // 'physical' or 'cyber'
+  const router = useRouter();
+  const params = useParams();
+  const category = params.category; // 'physical' or 'cyber'
 
   const [image, setImage] = useState(null);
   const [user, setUser] = useState(null);
