@@ -60,7 +60,7 @@ export default function LoginPage() {
       </nav>
 
       {/* Login Form */}
-      <div style={{ maxWidth: '500px', margin: '3rem auto', padding: '0 2rem' }}>
+      <div style={{ maxWidth: '500px', margin: '3rem auto', padding: '0 1rem' }}>
         <div style={{ background: '#FFFCF9', border: '0.5px solid #E8E0D5', borderRadius: '14px', padding: '2rem' }}>
           <h2 style={{ fontSize: '18px', fontWeight: 500, color: '#3D2216', marginBottom: '0.5rem' }}>welcome back</h2>
           <p style={{ fontSize: '13px', color: '#8C6B5A', marginBottom: '1.5rem' }}>log in to share your story</p>

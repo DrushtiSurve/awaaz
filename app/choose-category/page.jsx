@@ -54,7 +54,7 @@ export default function ChooseCategoryPage() {
       </nav>
 
       {/* Category Selection */}
-      <div style={{ maxWidth: '680px', margin: '3rem auto', padding: '0 2rem' }}>
+      <div style={{ maxWidth: '680px', margin: '3rem auto', padding: '0 1rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <h2 style={{ fontSize: '22px', fontWeight: 500, color: '#3D2216', marginBottom: '0.5rem' }}>
             what type of abuse do you want to share?
@@ -64,7 +64,8 @@ export default function ChooseCategoryPage() {
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+        <div style={{ display: 'grid',display: 'flex',
+          flexDirection: 'column', gap: '16px' }}>
           
           {/* Physical Category */}
           <button

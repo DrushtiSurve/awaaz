@@ -181,7 +181,7 @@ function SubmitContent() {
       </nav>
 
       {/* Submit Form */}
-      <div style={{ maxWidth: '680px', margin: '2rem auto', padding: '0 2rem' }}>
+      <div style={{ maxWidth: '680px', margin: '2rem auto', padding: '0 1rem' }}>
         <div style={{ background: '#FFFCF9', border: '0.5px solid #E8E0D5', borderRadius: '14px', padding: '2rem' }}>
           <h2 style={{ fontSize: '18px', fontWeight: 500, color: '#3D2216', marginBottom: '0.5rem' }}>
             share your story — {category === 'cyber' ? 'cyber crime' : 'physical abuse'}
@@ -216,7 +216,10 @@ function SubmitContent() {
             </div>
 
             {/* Location */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '1rem' }}>
+            <div style={{ display: 'grid', display: 'flex',
+              flexDirection: 'column',
+              gap: '12px', 
+              marginBottom: '1rem' }}>
               <div>
                 <label style={{ fontSize: '12px', color: '#7A3F2B', fontWeight: 500, display: 'block', marginBottom: '0.5rem' }}>
                   city *

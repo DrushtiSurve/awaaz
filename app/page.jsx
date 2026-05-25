@@ -315,7 +315,6 @@ export default function HomePage() {
                       color: '#7A3F2B',
                       cursor: 'pointer',
                       transition: 'all 0.2s ease',
-                      marginLeft: 250,
                     }}
                     onMouseOver={(e) => {
                       e.target.style.background = '#7A3F2B';
