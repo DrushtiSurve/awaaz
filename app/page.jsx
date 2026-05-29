@@ -295,7 +295,7 @@ export default function HomePage() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
                     <div style={{ fontSize: '15px', fontWeight: 500, color: color.name }}>
-                      {post.abuserName}
+                    {post.abuserName || 'Name not provided'}
                     </div>
                     <div style={{ fontSize: '12px', color: color.by }}>
                       {post.isAnonymous ? 'shared anonymously' : `shared by ${post.posterName}`}
@@ -337,7 +337,8 @@ export default function HomePage() {
 
                 <div style={{ display: 'flex', gap: '7px', marginBottom: '8px', flexWrap: 'wrap' }}>
                   <span style={{ fontSize: '11px', padding: '3px 10px', borderRadius: '10px', fontWeight: 500, background: color.locBg, color: color.locText }}>
-                    {post.city}, {post.state}
+                  {post.city || 'Location not provided'}
+                  {post.state ? `, ${post.state}` : ''}
                   </span>
                   <span style={{ fontSize: '11px', padding: '3px 10px', borderRadius: '10px', fontWeight: 500, background: color.typeBg, color: color.typeText }}>
                     {post.abuseType}

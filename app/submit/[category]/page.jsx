@@ -69,11 +69,11 @@ function SubmitContent() {
 
     try {
       // Validation
-      if (!abuserName || !city || !state || !abuseType || !description) {
-        setError('Please fill in all fields');
-        setSubmitting(false);
-        return;
-      }
+      if (!abuseType || !description) {
+      setError('Please select a category and share your story');
+      setSubmitting(false);
+      return;
+    }
 
       if (description.length < 50) {
         setError('Description must be at least 50 characters');
@@ -194,11 +194,11 @@ function SubmitContent() {
             {/* Abuser Name */}
             <div style={{ marginBottom: '1rem' }}>
               <label style={{ fontSize: '12px', color: '#7A3F2B', fontWeight: 500, display: 'block', marginBottom: '0.5rem' }}>
-                {category === 'cyber' ? "abuser's name / username / handle *" : "abuser's name *"}
+                {category === 'cyber' ? "abuser's name / username / handle (optional)" : "abuser's name (optional)"}
               </label>
               <input
                 type="text"
-                placeholder={category === 'cyber' ? "@username or full name" : "full name or nickname"}
+                placeholder={category === 'cyber' ? "@username, full name, or leave blank" : "full name or nickname"}
                 value={abuserName}
                 onChange={(e) => setAbuserName(e.target.value)}
                 style={{
@@ -222,7 +222,7 @@ function SubmitContent() {
               marginBottom: '1rem' }}>
               <div>
                 <label style={{ fontSize: '12px', color: '#7A3F2B', fontWeight: 500, display: 'block', marginBottom: '0.5rem' }}>
-                  city *
+                  city (optional)
                 </label>
                 <input
                   type="text"
@@ -244,7 +244,7 @@ function SubmitContent() {
               </div>
               <div>
                 <label style={{ fontSize: '12px', color: '#7A3F2B', fontWeight: 500, display: 'block', marginBottom: '0.5rem' }}>
-                  state *
+                 state (optional)
                 </label>
                 <input
                   type="text"
